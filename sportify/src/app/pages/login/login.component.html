@@ -1,1 +1,28 @@
-<p>login works!</p>
+<app-landing-menu></app-landing-menu>
+
+<section>
+    <div class="text-center loginBg">
+        <div class="white"></div>
+        <div class="text-center register">
+            <form class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal">Iniciar sesión</h1>
+                <br>
+                <input #email type="email" id="inputEmail" class="form-control " placeholder="Email" required autofocus>
+                <br>
+                <br>
+                <input #password type="password" id="inputPassword" class="form-control " placeholder="Contraseña"
+                    required>
+                <br>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recordarme
+                    </label>
+                    <br>
+                    <br>
+                </div>
+                <button type="button" class="btn loginBtn" (click)="logIn(email, password)">Entrar</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</section>
