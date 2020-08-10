@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sportify"
+    }
+  },
+  "defaultProject": "sportify",
+  "cli": {
+    "analytics": "f5d331af-aba6-4504-bf40-a250b6239713"
+  }
 }
