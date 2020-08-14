@@ -1,0 +1,19 @@
+section{
+    margin: 0;
+    padding: 0;
+}
+.page{
+    background-color: #00BFA5;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-weight: 900;
+}
+.card-header, .card-footer{
+    background-color: #00BFA5;
+    color: white;
+    font-weight: 700;
+}
+.card{
+    border: none
+}
