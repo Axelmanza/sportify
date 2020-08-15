@@ -1,12 +1,6 @@
 * {
     font-size: medium;
 }
-/* Class = header if something wrong */
-header{
-    background-color: #00BFA5;
-    font-family: ‘Roboto’, sans-serif;
-    color: #FFFFFF;
-}
 
 a:hover,
 a:active {
@@ -22,10 +16,14 @@ a:active {
 }
 
 .navbar {
-    background-color: #00BFA5;
+    background-color: black;
     text-align: center;
 }
 
 #whiteLink {
     color: white;
+}
+.navbar-toggler{
+    color: white;
+    border: 1.3px solid;
 }

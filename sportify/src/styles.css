@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Titillium Web', sans-serif;
+}
 body{
-    background-image: url(https://i.ibb.co/2Z1RbjG/istock-949190756.jpg);
+    background-image: url(../src/assets/wp.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;

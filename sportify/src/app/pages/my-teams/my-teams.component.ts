@@ -12,80 +12,80 @@ import Swal from 'sweetalert2';
 })
 export class MyTeamsComponent implements OnInit {
 
-  public teams: any
+  public teams = [new Team('Las Rozas', 'Cadete')]
   public team1 = new Team('','')
 
   constructor(private teamService: TeamService, private loginService: LoginService) { }
 
-  public getTeam(team1: Team) {
-    this.team1 = team1
-    console.log(team1);
-  }
+  // public getTeam(team1: Team) {
+  //   this.team1 = team1
+  //   console.log(team1);
+  // }
 
-  public addTeams(name: HTMLInputElement, category: HTMLInputElement) {
-    let newTeam = new Team(name.value, category.value);
-    newTeam.user_id = this.loginService.userLoged.user_id;
+  // public saveTeam(id: number) {
+  //   this.loginService.team_id = id
+  //   console.log(this.loginService.team_id);
+  // }
 
-    this.teamService.postTeam(newTeam).subscribe((data) => {
-      console.log(data)
-      this.teamService.getTeams(this.loginService.userLoged.user_id).subscribe((data) => {
-        console.log(data)
-        this.teams = data
-      })
-    });
-  };
+  // public addTeams(name: HTMLInputElement, category: HTMLInputElement) {
+  //   let newTeam = new Team(name.value, category.value);
+  //   newTeam.user_id = this.loginService.userLoged.user_id;
 
-  public UpdateTeam(name: HTMLInputElement, category: HTMLInputElement) {
-    console.log(this.team1)
-    let newTeam = new Team(name.value, category.value)
-    newTeam.team_id = this.team1.team_id;
+  //   this.teamService.postTeam(newTeam).subscribe((data) => {
+  //     console.log(data)
+  //     this.teamService.getTeams(this.loginService.userLoged.user_id).subscribe((data) => {
+  //       console.log(data)
+  //       this.teams = data
+  //     })
+  //   });
+  // };
 
-    if (name.value === "") { newTeam.name = this.team1.name }
+  // public UpdateTeam(name: HTMLInputElement, category: HTMLInputElement) {
+  //   console.log(this.team1)
+  //   let newTeam = new Team(name.value, category.value)
+  //   newTeam.team_id = this.team1.team_id;
 
-    if (category.value === "") { newTeam.category = this.team1.category }
-    console.log(newTeam)
+  //   if (name.value === "") { newTeam.name = this.team1.name }
 
-    this.teamService.putTeam(newTeam).subscribe((data) => {
-      this.teamService.getTeams(this.loginService.userLoged.user_id).subscribe(data => {
-        this.teams = data;
-      });
+  //   if (category.value === "") { newTeam.category = this.team1.category }
+  //   console.log(newTeam)
 
-    })
-  }
+  //   this.teamService.putTeam(newTeam).subscribe((data) => {
+  //     this.teamService.getTeams(this.loginService.userLoged.user_id).subscribe(data => {
+  //       this.teams = data;
+  //     });
 
-  public deleteTeam(id: number) {
-    Swal.fire({
-      title: '¿Estás seguro?',
-      text: "¡No podrás recuperarlo!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#00bfa5',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'borrar'
-    }).then((result) => {
-      if (result.value) {
-        console.log(id)
-        this.teamService.deleteTeam(id).subscribe((data) => {
-          console.log(data);
-          this.teamService.getTeams(this.loginService.userLoged.user_id).subscribe((data) => {
-            console.log(data);
-            this.teams = data;
-            Swal.fire({
-              title: '¡Eliminado!',
-              text: 'Tu equipo ha sido borrado',
-              icon: 'success',
-              confirmButtonColor: '#00bfa5'
-            })
-          })
-        })
-      }
-    })
-  }
+  //   })
+  // }
 
-  saveTeam(id: number) {
-    this.loginService.team_id = id
-    console.log(this.loginService.team_id);
-  }
+  // public deleteTeam(id: number) {
+  //   Swal.fire({
+  //     title: '¿Estás seguro?',
+  //     text: "¡No podrás recuperarlo!",
+  //     icon: 'warning',
+  //     showCancelButton: true,
+  //     confirmButtonColor: '#00bfa5',
+  //     cancelButtonColor: '#d33',
+  //     confirmButtonText: 'borrar'
+  //   }).then((result) => {
+  //     if (result.value) {
+  //       console.log(id)
+  //       this.teamService.deleteTeam(id).subscribe((data) => {
+  //         console.log(data);
+  //         this.teamService.getTeams(this.loginService.userLoged.user_id).subscribe((data) => {
+  //           console.log(data);
+  //           this.teams = data;
+  //           Swal.fire({
+  //             title: '¡Eliminado!',
+  //             text: 'Tu equipo ha sido borrado',
+  //             icon: 'success',
+  //             confirmButtonColor: '#00bfa5'
+  //           })
+  //         })
+  //       })
+  //     }
+  //   })
+  // }
 
   ngOnInit(): void {
   }

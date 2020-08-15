@@ -1,3 +1,6 @@
+*{
+    font-weight: 300;
+}
 section{
     margin: 0;
     padding: 0;
@@ -8,33 +11,30 @@ section{
     margin-top: 4px
 }
 .page{
-    background-color: #00BFA5;
-    color: white;
+    margin: auto;
+    margin-top: 18px;
+    background-color: #FFCC00;
+    color: black;
     text-align: center;
     font-size: large;
-    font-weight: 900;
-    border: 2px solid;
-    border-color: black
+    font-weight: 800;
+    width: 85vw;
 }
 .card-header, .card-footer{
-    background-color: #00BFA5;
-    color: white;
+    background-color: grey;
+    color: #ffcc00;
     font-weight: 700;
 }
 .card{
-    border: none;
-    max-width: 18rem;
+    max-width: 22rem;
     margin: auto;
-    border: 3px solid;
-    border-radius: 6px;
-}
-.newTeam{
-    margin: auto;
+    border: none
 }
 .btn {
-    margin: auto;
+    margin-left: 36%;
     margin-bottom: 16px;
-    background-color: #00bfa5;
-    width: 25vw;
-    color: white;
+    background-color: #ffcc00;
+    color: black;
+    font-weight: 600;
+    width: 30vw;
 }
