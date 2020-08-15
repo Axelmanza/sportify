@@ -1,16 +1,16 @@
 <app-coach-menu></app-coach-menu>
 
 <section class="page">
-    < 
+    <!-- <i class="fas fa-chevron-left" routerLink='/'></i> -->
     Mis Equipos
 </section>
 <br>
 <section>
-    <div class="card mb-3" style="max-width: 18rem; margin: auto;">
+    <div class="card mb-3" *ngFor="let team of teams">
         <div class="card-header">
-            Real Madrid
+            {{team.name}}
         </div>
-        <div class="card-body text-success">
+        <div class="card-body">
             <h5 class="card-title">
                 Partidos
                 <i class="fas fa-trophy"></i>
@@ -25,7 +25,12 @@
             </h5>
         </div>
         <div class="card-footer">
-            Cadete
+            {{team.category}}
         </div>
+    </div>
+    <div class="newTeam">
+        <button class="btn" data-toggle="modal" data-target="#createTeam">
+            Nuevo equipo
+        </button>
     </div>
 </section>
