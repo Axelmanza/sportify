@@ -1,0 +1,40 @@
+section{
+    margin: 0;
+    padding: 0;
+}
+.fa-chevron-left{
+    position: absolute;
+    left: 10px;
+    margin-top: 4px
+}
+.page{
+    background-color: #00BFA5;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-weight: 900;
+    border: 2px solid;
+    border-color: black
+}
+.card-header, .card-footer{
+    background-color: #00BFA5;
+    color: white;
+    font-weight: 700;
+}
+.card{
+    border: none;
+    max-width: 18rem;
+    margin: auto;
+    border: 3px solid;
+    border-radius: 6px;
+}
+.newTeam{
+    margin: auto;
+}
+.btn {
+    margin: auto;
+    margin-bottom: 16px;
+    background-color: #00bfa5;
+    width: 25vw;
+    color: white;
+}
