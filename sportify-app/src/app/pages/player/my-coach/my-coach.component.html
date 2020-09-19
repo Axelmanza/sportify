@@ -1,0 +1,36 @@
+<app-player-menu></app-player-menu> 
+
+<section #mySettings>
+    <div class="header">
+        <h1 class="header-title">Mi entrenador</h1>
+        <a routerLink="/player/settings">
+            <img src="../../../../assets/menus/plaaayer.svg" alt="avatar" id="avatar">
+        </a>
+    </div>
+
+    <div id="profile">
+        <img src="../../../../assets/pages/player/mycoach.svg" id="user">
+    </div>
+
+    <div id="div">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nombre
+                <p contenteditable="true" id="info">{{coach.name}}</p>
+            </li>
+            <li class="list-group-item">Apellido
+                <p contenteditable="true" id="info">{{coach.lastName}}</p>
+            </li>
+            <li class="list-group-item">Mail
+                <p contenteditable="true" id="info">{{coach.email}}</p>
+            </li>
+            <li class="list-group-item">Telefono
+                <p contenteditable="true" id="info">{{coach.phone}}</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+<app-green-footer></app-green-footer>

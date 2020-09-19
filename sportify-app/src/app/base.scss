@@ -1,0 +1,264 @@
+
+/* Global Styles */
+// Variables Sass
+
+$myColor: #00bfa5;
+$darker: #158a7a;
+$small: 1rem;
+$medium: 1.8rem;
+$color: grey;
+$red: #E2574C;
+
+ section {
+      background: linear-gradient($myColor, #e6f8f6);
+      padding-top: 15vh;
+      min-height: 93vh;
+      color: $color;
+      padding-bottom: 80px;
+      //titulo seccinon
+    //   .title {
+    //    display: none;
+    // }
+  }
+
+  h2, p, input, label, button {
+    font-size: 1rem;
+  }
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  a {
+    color: $myColor;
+  }
+  a:hover {
+     color: $darker;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    width: 250px;
+    box-sizing: border-box;
+    background: $myColor;
+    border: none;
+    color: white;
+    font-size: $medium;
+    cursor: pointer;
+    font-size: $small;
+    border-radius: 0.5rem;
+
+    
+  }
+
+button:hover {
+      background: $darker;
+      color: white;
+    }
+  
+  %centerflex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+  }
+
+  //header mobile view
+  .header {
+    background: $myColor;
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    z-index: 100;
+    h1 {
+      margin-top: 20px;
+    }
+    #back {
+      position: absolute;
+      top: 35%;
+      left: 5%;
+    }
+
+    #avatar {
+      position: absolute;
+      top: 15%;
+      right: 5%;
+      background: white;
+      border-radius: 50%;
+    }
+  }
+  //my teams section
+    #myTeams, #myPlayers, #myTrainings, #myGames, #myExercises, #mySettings, #myTournaments {
+      min-width: 100vw;
+      min-height: 90vh;
+      @extend %centerflex;
+      flex-direction: column;
+    }
+
+    .cards-container {
+      min-width: 90vw;
+      display:flex;
+      margin: 0.5rem;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      #sinRegistro {
+        margin: 5vw;
+        color: white;
+          text-align: center;
+      }
+    }
+
+    #team-card, #player-card, #player-card-phone, #train-card, #ex-card {
+      width: 346px;
+      margin: 0.5rem;
+      text-align: center;
+      overflow: hidden;
+      border-radius: 5px;
+      background: #FFFFFF;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    //close icon
+    .close {
+      background: transparent;
+      color: $red;
+        margin: auto;
+        width: 95vw;
+        text-align: right;
+    }
+    .close:hover {
+      background: transparent;
+      color: $red;
+    }
+
+    .newTeam {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      button {
+         margin: auto;
+      }
+           
+        }
+
+    //modal 
+
+    #modalNew {
+        background: white;
+        label {
+        color: $darker;
+        margin-left: 8px;
+        }
+        #type {
+          color: $darker;
+          text-align: center;
+        }
+        input {
+        padding:8px;
+        border:none;
+        border-bottom:1px solid #ccc;
+        width:100%;
+        }
+         input:focus, .form-line-active textarea:focus {
+          border: 1px solid $darker !important;
+          box-shadow: 0 0 3px $darker !important;
+          -moz-box-shadow: 0 0 3px $darker !important;
+          -webkit-box-shadow: 0 0 3px $darker !important;
+          }
+          
+          input:focus, textarea:focus, select:focus {
+          outline-offset: 0px !important;
+          outline: none !important;
+          }
+      } 
+    
+      select {
+        padding: 0.5rem;
+        display: block;
+        margin: auto;
+      }
+
+    //btn addNew
+
+    .btnModal {
+      padding: 0.5rem;
+      width: 240px;
+      margin: auto;
+      margin-bottom: 1.3rem;
+    }
+
+    //search container
+
+    .search-container {
+      @extend %centerflex;
+      margin-top: 5px;
+      width: 100vw;
+     
+      .search {
+        @extend %centerflex;
+      
+      margin-bottom: 3vh;
+      }
+      input[type=text] {
+        padding: 6px 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-radius: 0.5rem;
+        min-width: 40vw;
+      }
+    button {
+      margin-left: 2vw;
+      padding: 2px;
+      width: 8vw;
+      background: white;
+      color: $myColor;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ccc;
+    }
+    
+  }
+
+   
+  //desktop version
+  @media screen and (min-width: 750px) {
+   
+  h1 {
+      font-size: 1.8vw;
+  }
+
+  h2 {
+   font-size: 1.3vw; 
+  }
+
+    .header {
+      top: 7vh;
+      #avatar {
+        display: none;
+      }
+    }
+    #team-card {
+    width: 332px;
+    margin:2rem;
+    }
+
+    .search-container {
+      margin-top: 5vh;
+    }
+
+  }
+  
+ 

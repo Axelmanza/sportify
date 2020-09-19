@@ -1,0 +1,216 @@
+/* Global Styles */
+// Variables Sass
+$myColor: #00bfa5;
+$darker: #0c534a;
+$small: 1rem;
+$medium: 1.8rem;
+$colorin: white;
+$color: gray;
+
+ section {
+      color: $color;
+      padding-top: 15vh;
+  }
+
+  h1, p, input, label, button {
+    font-size: 1rem;
+  }
+  h2 {
+      font-size: 2rem;
+  }
+
+  a {
+    color: $myColor;
+  }
+  a:hover {
+     color: $darker;
+  }
+
+  button {
+    padding: 2rem 6rem;
+    background: $myColor;
+    border: none;
+    color: $color;
+    font-size: $medium;
+    cursor: pointer;
+    font-size: $small;
+    border-radius: 0.5rem;
+  }
+ 
+  /* Contact Section */
+  #contact {
+    position: relative;
+    min-height: 93vh;
+    background: linear-gradient($myColor, #e6f8f6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-wrapper {
+    background: white;
+    width: 50vw;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .form-head {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  img {
+      width: 14vh;
+  }
+
+  h2 {
+      color: grey;
+  }
+
+
+  /* Formulario */
+
+  form {
+      /* Centrar elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fas {
+    font-size: 24px;
+  }
+  
+  .form-wrapper label {
+    width: 100%;
+  } 
+
+   .email-form,
+  .password-form,
+  .remember-form,
+  .agree-form {
+    text-align: left;
+    padding: 0.5rem;
+    width: 80%;
+  }
+
+  .email-form label,
+  .password-form label {
+    margin-left: 3.5rem;
+    margin-bottom: 0px;
+  }
+
+  .remember-form{
+    text-align: center;
+  }
+
+
+  .input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-div i {
+    margin: 1rem;
+    color: $myColor;
+  } 
+
+  input:focus, input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+ .register a, .register p {
+      text-decoration: underline;
+      color: $myColor;
+      display: inline-block;
+      font-size: 0.7rem;
+  }
+
+  .form-wrapper button {
+    width: 40%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    
+  }
+  
+  .form-wrapper button:hover {
+    background: #047c6c;
+  } 
+
+  /* Versión movil */
+  @media screen and (max-width: 760px) {
+    section {
+        color: white;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      height: 86vh;
+      background-color: transparent;
+      padding:0;
+      margin-bottom: 0rem;
+    }
+
+    img {
+        width: 25%;
+        border-radius: 50%;
+        box-shadow: 1px 1px #02a08b;
+    }
+    
+    .email-form,
+    .password-form {
+        width: 90vw;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+.email-form label,
+  .password-form label {
+    text-shadow: 0px 0.5px 0.5px #0acab1;
+    margin-bottom: 0px;
+  }
+  /* iconos */
+  .fas {
+    text-shadow: 0px 1px 1px #017a6a; 
+    font-size: 24px;
+  }
+
+  .email-form label,
+  .password-form label {
+    margin-left: 0.5rem;
+  }
+
+  .email-form input,
+  .password-form input,
+   button {
+      border-color: transparent;
+    }
+
+    .register {
+        color: grey;
+        text-shadow: none;
+    }
+
+    .input-div {
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0px 1px 1px $myColor;
+    } 
+    
+    button {
+        box-shadow: 0px 1px 1px $darker;
+        font-size: $small;
+        border-radius: 0.5rem;
+    }
+
+  }

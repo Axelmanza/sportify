@@ -1,0 +1,24 @@
+footer {
+    padding-top: 0.5%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 3.3vh;
+    font-weight: 600;
+    text-align: center;
+    background-color: #00bfa5;
+    color: white;
+    padding-bottom: 0;
+    font-family: 'Paytone One', sans-serif;
+}
+
+
+@media screen and (max-width: 932px) {
+
+    footer {
+        display: none;
+    }
+
+}

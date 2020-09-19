@@ -1,0 +1,95 @@
+<app-coach-menu></app-coach-menu>
+
+<section id="myPlayers">
+    <div class="header">
+        <img src="../../../../assets/menus/back.svg" alt="go back" id="back" routerLink="/coach/myTeams">
+           <h1 class="header-title" >Mis jugadores</h1> 
+        <a routerLink="/coach/settings">
+            <img src="../../../../assets/menus/avataaars.svg" alt="avatar" id="avatar">
+        </a>
+    </div>
+    <!-- My players cards -->
+        <div class="cards-container">
+            <div *ngFor="let player of dataBase; let i = index" id="player-card">
+                <div class="delete">
+                    <img src="../../../../assets/pages/close.svg" alt="delete user" id="delete"
+                        (click)="deletePlayers(dataBase[i].user_id)">
+                </div>
+                <div class="player-div">
+                    <img src="../../../../assets/pages/myplayers/myplayer.svg" alt="user-image" id="user-img">
+                    <div class="player-info">
+                        <div class="player-name">
+                            <h1>
+                                {{player.name | uppercase}} {{player.lastName | uppercase}}
+                            </h1>
+                            <div class="contact-info">
+                                <h2>
+                                    <strong>Email: </strong> <br>
+                                    {{player.email}}
+                                </h2>
+                                <h2>
+                                    <strong>Mvl: </strong> <br>
+                                    {{player.phone}}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngFor="let player of dataBase; let i = index" id="player-card-phone">
+                <div class="player-name">
+                    <h1>
+                        {{player.name | uppercase}} {{player.lastName | uppercase}}
+                    </h1>
+                    <img src="../../../../assets/pages/close.svg" alt="delete user" id="delete" (click)="deletePlayers(dataBase[i].user_id)">
+                </div>
+                <div class="contact-info">
+                    <h2>
+                        <strong>Email: </strong> 
+                        {{player.email}}
+                    </h2>
+                    <h2>
+                        <strong>Mvl: </strong> 
+                        {{player.phone}}
+                    </h2>
+                </div>
+            </div>
+        </div>
+    <div class="newTeam">
+        <button data-toggle="modal" data-target="#exampleModalCenter">
+            Nuevo jugador
+        </button>
+    </div>
+    <!-- modal new player -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content border-0" id="modalNew">
+                <div class="modal-header border-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                       <img src="../../../../assets/modals/close.svg" alt="close-modal" >
+                    </button>
+                </div>
+                <div class="modal-body border-0">
+                    <div class="card mb-1 border-0">
+                        <div class="card-header bg-transparent border-0" id="date">
+                            <label for="email">email:</label><br>
+                            <input type="email" id="url" #email placeholder="email">
+                        </div>
+                        <div class="card-header bg-transparent border-0">
+                            <label for="phone">móvil:</label><br>
+                            <input type="tel" #phone placeholder="telefono">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer border-0 ">
+                    <button class="btn new" (click)="addPlayer(email, phone)" data-dismiss="modal" 
+                        aria-label="Close" class="btnModal">Añadir jugador</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-green-footer></app-green-footer>

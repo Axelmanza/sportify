@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+body {
+    position: relative;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-trash-alt {
+    cursor:pointer;
+}
+
+.fa-edit {
+    cursor:pointer;
+}
+
+.fa-eye {
+    cursor:pointer;
+}
