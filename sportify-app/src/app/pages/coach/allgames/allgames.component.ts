@@ -53,7 +53,7 @@ export class AllGamesComponent implements OnInit {
           console.log(data);
           this.dataBase = data;
           if (data[0].lenght != 0) {
-            // preuntar a marta
+            // preguntar a marta
           }
         });
     });
