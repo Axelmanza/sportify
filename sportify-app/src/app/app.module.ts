@@ -2,15 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from "@angular/common/http";
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Others
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 //Menus y footer
@@ -46,8 +46,6 @@ import { AllworkoutsComponent } from './pages/coach/allworkouts/allworkouts.comp
 import { CoachTournamentComponent } from './pages/coach/coach-tournament/coach-tournament.component';
 import { PlayerTournamentComponent } from './pages/player/player-tournament/player-tournament.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +70,7 @@ import { PlayerTournamentComponent } from './pages/player/player-tournament/play
     AllGamesComponent,
     AllworkoutsComponent,
     CoachTournamentComponent,
-    PlayerTournamentComponent
+    PlayerTournamentComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,13 +86,8 @@ import { PlayerTournamentComponent } from './pages/player/player-tournament/play
     FormsModule,
     ReactiveFormsModule,
     ValidateEqualModule,
-    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HttpClient],
+  bootstrap: [AppComponent],
 })
-export class AppModule {
- 
-
-}
-
+export class AppModule {}
